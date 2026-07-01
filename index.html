@@ -1,0 +1,640 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Mukund M K — AI/ML Developer. Building intelligent applications with Generative AI, LLMs, and Flutter." />
+  <meta name="author" content="Mukund M K" />
+  <meta name="theme-color" content="#071620" />
+
+  <!-- Favicon (browser-tab / address-bar icon) -->
+  <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32.png" />
+  <link rel="icon" type="image/png" sizes="64x64" href="assets/favicon-64.png" />
+  <link rel="apple-touch-icon" sizes="180x180" href="assets/favicon-180.png" />
+
+  <title>Mukund M K · Software Developer</title>
+
+  <!-- ===== Social preview (Open Graph — LinkedIn, WhatsApp, Facebook) ===== -->
+  <!-- NOTE: once the site is deployed, replace the two URLs below with your full
+       live URL, e.g. https://yourname.github.io/  and  .../assets/profile.jpg -->
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="Mukund M K" />
+  <meta property="og:title" content="Mukund M K · Software Developer" />
+  <meta property="og:description" content="Software developer building intelligent, human-centered products — Generative AI, LLMs, prompt engineering, and cross-platform Flutter apps." />
+  <meta property="og:image" content="assets/profile.jpg" />
+  <meta property="og:image:alt" content="Mukund M K — AI/ML Developer" />
+  <meta property="og:url" content="" />
+
+  <!-- ===== Twitter / X card ===== -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Mukund M K · AI/ML Developer" />
+  <meta name="twitter:description" content="AI/ML developer building intelligent, human-centered products — Generative AI, LLMs, and cross-platform Flutter apps." />
+  <meta name="twitter:image" content="assets/profile.jpg" />
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+
+  <!-- Icons: Font Awesome (UI/social) + Devicon (tech logos) -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css" />
+
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <!-- ===== Animated background layers ===== -->
+  <div class="bg">
+    <div class="bg__grid"></div>
+    <div class="bg__blob bg__blob--1"></div>
+    <div class="bg__blob bg__blob--2"></div>
+    <div class="bg__blob bg__blob--3"></div>
+    <canvas id="particles" class="bg__particles"></canvas>
+    <div class="bg__noise"></div>
+  </div>
+
+  <!-- ===== Scroll progress ===== -->
+  <div class="progress" id="progress"></div>
+
+  <!-- ===== Navigation ===== -->
+  <header class="nav" id="nav">
+    <div class="container nav__inner">
+      <a href="#hero" class="nav__logo" data-hover>Mukund M K</a>
+      <nav>
+        <button class="nav__toggle" id="navToggle" aria-label="Toggle menu" aria-expanded="false">
+          <span></span><span></span><span></span>
+        </button>
+        <ul class="nav__links" id="navLinks">
+          <li><a href="#about" data-hover><span>01.</span> About</a></li>
+          <li><a href="#experience" data-hover><span>02.</span> Experience</a></li>
+          <li><a href="#mentorship" data-hover><span>03.</span> Mentorship</a></li>
+          <li><a href="#skills" data-hover><span>04.</span> Skills</a></li>
+          <li><a href="#education" data-hover><span>05.</span> Education</a></li>
+          <li><a href="#achievements" data-hover><span>06.</span> Achievements</a></li>
+          <li><a href="#hobbies" data-hover><span>07.</span> Hobbies</a></li>
+          <li><a href="#contact" data-hover><span>08.</span> Contact</a></li>
+          <li><a href="assets/Mukund_M_K_Resume.pdf" target="_blank" rel="noopener" class="nav__resume btn-mini" data-hover>Resume</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <!-- ===== Hero ===== -->
+    <section class="hero" id="hero">
+      <div class="container hero__inner">
+        <div class="hero__content">
+          <p class="hero__eyebrow"><span class="wave">👋</span> Hi there, I'm</p>
+          <h1 class="hero__title">
+            <span class="gradient-text">Mukund M K</span>
+          </h1>
+          <h2 class="hero__subtitle">
+            I build <span class="rotator" id="rotator">intelligent applications</span>
+          </h2>
+          <p class="hero__text">
+            AI/ML developer crafting intelligent, human-centered products —
+            Generative-AI assistants, LLM workflows, and cross-platform Flutter
+            apps with rock-solid backends. I turn ideas into software people
+            genuinely love to use.
+          </p>
+          <div class="hero__actions">
+            <a href="#contact" class="btn btn--primary" data-hover><i class="fa-regular fa-paper-plane"></i> Let's connect</a>
+            <a href="#experience" class="btn btn--ghost" data-hover>View my work <i class="fa-solid fa-arrow-right"></i></a>
+          </div>
+          <ul class="hero__socials">
+            <li><a href="https://github.com/thisisMUKUND11" target="_blank" rel="noopener" aria-label="GitHub" data-hover><i class="fa-brands fa-github"></i></a></li>
+            <li><a href="https://www.linkedin.com/in/mukund-m-k/" target="_blank" rel="noopener" aria-label="LinkedIn" data-hover><i class="fa-brands fa-linkedin-in"></i></a></li>
+            <li><a href="https://www.instagram.com/mukund_.11._?igsh=a21lNnc0Z21qN2x3" target="_blank" rel="noopener" aria-label="Instagram" data-hover><i class="fa-brands fa-instagram"></i></a></li>
+            <li><a href="mailto:mkmukund11@gmail.com" aria-label="Email" data-hover><i class="fa-regular fa-envelope"></i></a></li>
+          </ul>
+        </div>
+
+        <div class="hero__visual" aria-hidden="true">
+          <div class="orbit orbit--avatar">
+            <div class="orbit__ring orbit__ring--1"></div>
+            <div class="orbit__ring orbit__ring--2"></div>
+            <!-- Illustrated avatar (assets/avatar.png) -->
+            <div class="avatar" data-tilt>
+              <img src="assets/avatar.png" alt="Mukund M K — AI/ML developer illustration"
+                   onerror="this.style.display='none';this.nextElementSibling.style.display='grid'" />
+              <div class="avatar__fallback">MK</div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <a href="#about" class="hero__scroll" data-hover><span></span>Scroll</a>
+    </section>
+
+    <!-- ===== About ===== -->
+    <section class="section" id="about">
+      <div class="container">
+        <h2 class="section__title"><span class="section__num">01.</span> About Me</h2>
+        <div class="about">
+          <div class="about__text glass">
+            <p>
+              I'm <strong>Mukund M K</strong> — a Computer Science &amp; Engineering
+              student and AI/ML developer from Coimbatore, India, driven by one
+              belief: <strong>great technology should feel effortless</strong>. I love
+              turning complex, intelligent systems into products that simply work for
+              the people using them.
+            </p>
+            <p>
+              As an <strong>AI/ML Associate Intern at DESMOSLAB</strong>, I work across
+              the entire AI lifecycle — integrating Generative-AI APIs, engineering
+              prompts for LLM-powered assistants, and shipping cross-platform Flutter
+              apps backed by clean, reliable FastAPI services. From data to deployment,
+              I enjoy owning the whole journey.
+            </p>
+            <p>
+              I care deeply about readable code, thoughtful design, and solving real
+              problems — not just writing software. Curious by nature and always
+              leveling up, I'm at my best when I'm learning something new and building
+              what comes next.
+            </p>
+            <p class="about__highlight">
+              <i class="fa-solid fa-rocket"></i> I stay open to new tools and
+              technologies, quickly picking up whatever it takes to turn an idea
+              into reality.
+            </p>
+          </div>
+          <div class="about__photo-col">
+            <img src="assets/profile.jpg" alt="Mukund M K"
+                 onerror="this.closest('.about__photo-col').style.display='none'" />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== Experience ===== -->
+    <section class="section" id="experience">
+      <div class="container">
+        <h2 class="section__title"><span class="section__num">02.</span> Experience</h2>
+        <div class="timeline">
+          <article class="tl-item glass" data-tilt>
+            <div class="tl-item__logo">
+              <!-- Replace assets/desmoslab-logo.png with the company logo -->
+              <img src="assets/desmoslab-logo.png" alt="DESMOSLAB"
+                   onerror="this.style.display='none';this.nextElementSibling.style.display='grid'" />
+              <div class="tl-item__logo-fallback"><i class="fa-solid fa-flask"></i></div>
+            </div>
+            <div class="tl-item__body">
+              <div class="tl-item__head">
+                <h3>AI/ML Associate Intern</h3>
+                <span class="badge badge--live">● Present</span>
+              </div>
+              <p class="tl-item__meta">
+                <strong>DESMOSLAB</strong> · Coimbatore, India
+                <span class="tl-item__date"><i class="fa-regular fa-calendar"></i> Aug 2025 — Present</span>
+              </p>
+              <ul class="tl-item__list">
+                <li>Developed AI-powered applications by integrating Generative-AI APIs for intelligent automation and enhanced user interactions.</li>
+                <li>Built and maintained Flutter-based cross-platform mobile apps with backend API integration and AI-driven features.</li>
+                <li>Contributed to end-to-end AI workflows — data preparation, model development, evaluation, deployment, and performance monitoring.</li>
+                <li>Developed AI-assistant solutions using LLMs, prompt engineering, and conversational-AI techniques.</li>
+              </ul>
+              <div class="tl-item__tags">
+                <span>Python</span><span>Generative AI</span><span>LLMs</span><span>Prompt Engineering</span>
+                <span>Flutter</span><span>FastAPI</span>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== Mentorship & Leadership ===== -->
+    <section class="section" id="mentorship">
+      <div class="container">
+        <h2 class="section__title"><span class="section__num">03.</span> Mentorship &amp; Leadership</h2>
+        <div class="mentor-grid">
+          <article class="mentor-card glass" data-tilt>
+            <div class="mentor-card__top">
+              <span class="mentor-card__ic"><i class="fa-solid fa-laptop-code"></i></span>
+              <span class="mentor-card__count">15+ <small>students</small></span>
+            </div>
+            <h3>LeetCode Peer Mentor</h3>
+            <p>Guided 15+ junior students in solving Data Structures &amp; Algorithms problems on LeetCode — breaking down approaches, debugging together, and building their confidence to solve challenges on their own. This experience sharpened my leadership and problem-solving skills.</p>
+            <div class="mentor-tags">
+              <span><i class="fa-solid fa-people-group"></i> Leadership</span>
+              <span><i class="fa-solid fa-lightbulb"></i> Problem-Solving</span>
+              <span><i class="fa-solid fa-code"></i> DSA</span>
+            </div>
+          </article>
+
+          <article class="mentor-card glass" data-tilt>
+            <div class="mentor-card__top">
+              <span class="mentor-card__ic"><i class="fa-solid fa-chalkboard-user"></i></span>
+              <span class="mentor-card__count">2 <small>teams</small></span>
+            </div>
+            <h3>Team Mentor · DESMOSLAB</h3>
+            <p>Mentored the UI/UX team and the Flutter team on frontend development during my internship — guiding them from UI/UX design and logo creation to building polished cross-platform interfaces and using LLMs to develop smarter and faster.</p>
+            <div class="mentor-tags">
+              <span><i class="fa-solid fa-pen-ruler"></i> UI/UX Design</span>
+              <span><i class="fa-solid fa-shapes"></i> Logo Creation</span>
+              <span><i class="devicon-flutter-plain colored"></i> Flutter</span>
+              <span><i class="fa-solid fa-robot"></i> LLM Development</span>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== Skills ===== -->
+    <section class="section" id="skills">
+      <div class="container">
+        <h2 class="section__title"><span class="section__num">04.</span> Skills &amp; Expertise</h2>
+        <!-- Auto-scrolling core-tech marquee -->
+        <div class="tech-marquee" aria-hidden="true">
+          <div class="tech-marquee__track">
+            <span class="marq"><i class="devicon-python-plain colored"></i> Python</span>
+            <span class="marq"><i class="devicon-tensorflow-original colored"></i> TensorFlow</span>
+            <span class="marq"><i class="devicon-pytorch-original colored"></i> PyTorch</span>
+            <span class="marq"><i class="devicon-pandas-original colored"></i> Pandas</span>
+            <span class="marq"><i class="devicon-numpy-original colored"></i> NumPy</span>
+            <span class="marq"><i class="devicon-scikitlearn-plain colored"></i> Scikit-learn</span>
+            <span class="marq"><i class="devicon-flutter-plain colored"></i> Flutter</span>
+            <span class="marq"><i class="devicon-fastapi-plain colored"></i> FastAPI</span>
+            <span class="marq"><i class="devicon-mysql-plain colored"></i> SQL</span>
+            <span class="marq"><i class="devicon-git-plain colored"></i> Git</span>
+            <span class="marq"><i class="devicon-jupyter-plain colored"></i> Jupyter</span>
+            <span class="marq"><i class="devicon-vscode-plain colored"></i> VS Code</span>
+            <span class="marq"><i class="devicon-figma-plain colored"></i> Figma</span>
+            <!-- duplicate for seamless loop -->
+            <span class="marq"><i class="devicon-python-plain colored"></i> Python</span>
+            <span class="marq"><i class="devicon-tensorflow-original colored"></i> TensorFlow</span>
+            <span class="marq"><i class="devicon-pytorch-original colored"></i> PyTorch</span>
+            <span class="marq"><i class="devicon-pandas-original colored"></i> Pandas</span>
+            <span class="marq"><i class="devicon-numpy-original colored"></i> NumPy</span>
+            <span class="marq"><i class="devicon-scikitlearn-plain colored"></i> Scikit-learn</span>
+            <span class="marq"><i class="devicon-flutter-plain colored"></i> Flutter</span>
+            <span class="marq"><i class="devicon-fastapi-plain colored"></i> FastAPI</span>
+            <span class="marq"><i class="devicon-mysql-plain colored"></i> SQL</span>
+            <span class="marq"><i class="devicon-git-plain colored"></i> Git</span>
+            <span class="marq"><i class="devicon-jupyter-plain colored"></i> Jupyter</span>
+            <span class="marq"><i class="devicon-vscode-plain colored"></i> VS Code</span>
+            <span class="marq"><i class="devicon-figma-plain colored"></i> Figma</span>
+          </div>
+        </div>
+
+        <div class="skills-grid">
+
+          <div class="skill-card glass" data-tilt>
+            <h3><i class="fa-solid fa-code"></i> Programming Languages</h3>
+            <div class="tiles">
+              <span class="tile"><i class="devicon-python-plain colored"></i><b>Python</b></span>
+              <span class="tile"><i class="devicon-mysql-plain colored"></i><b>SQL</b></span>
+              <span class="tile"><i class="devicon-html5-plain colored"></i><b>HTML</b></span>
+              <span class="tile"><i class="devicon-css3-plain colored"></i><b>CSS</b></span>
+            </div>
+          </div>
+
+          <div class="skill-card glass" data-tilt>
+            <h3><i class="fa-solid fa-chart-line"></i> ML &amp; Data Science</h3>
+            <div class="tiles">
+              <span class="tile"><i class="fa-solid fa-table" style="color:#ff7e6b"></i><b>Pandas</b></span>
+              <span class="tile"><i class="fa-solid fa-square-root-variable" style="color:#38bdf8"></i><b>NumPy</b></span>
+              <span class="tile"><i class="devicon-matplotlib-plain colored"></i><b>Matplotlib</b></span>
+              <span class="tile"><i class="devicon-scikitlearn-plain colored"></i><b>Scikit-learn</b></span>
+              <span class="tile"><i class="devicon-tensorflow-original colored"></i><b>TensorFlow</b></span>
+              <span class="tile"><i class="devicon-pytorch-original colored"></i><b>PyTorch</b></span>
+            </div>
+          </div>
+
+          <div class="skill-card glass" data-tilt>
+            <h3><i class="fa-solid fa-brain"></i> AI &amp; Intelligent Apps</h3>
+            <div class="tiles">
+              <span class="tile"><i class="fa-solid fa-comment-dots" style="color:#38bdf8"></i><b>LLMs</b></span>
+              <span class="tile"><i class="fa-solid fa-wand-magic-sparkles" style="color:#ffd166"></i><b>Prompt Eng.</b></span>
+              <span class="tile"><i class="fa-solid fa-robot" style="color:#2dd4bf"></i><b>AI Assistants</b></span>
+              <span class="tile"><i class="fa-solid fa-comments" style="color:#ff7e6b"></i><b>Conversational AI</b></span>
+              <span class="tile"><i class="fa-solid fa-plug" style="color:#a78bfa"></i><b>AI API Integration</b></span>
+            </div>
+          </div>
+
+          <div class="skill-card glass" data-tilt>
+            <h3><i class="fa-solid fa-mobile-screen"></i> Mobile &amp; Backend</h3>
+            <div class="tiles">
+              <span class="tile"><i class="devicon-flutter-plain colored"></i><b>Flutter</b></span>
+              <span class="tile"><i class="devicon-fastapi-plain colored"></i><b>FastAPI</b></span>
+              <span class="tile"><i class="fa-solid fa-network-wired" style="color:#5eead4"></i><b>REST APIs</b></span>
+            </div>
+          </div>
+
+          <div class="skill-card glass" data-tilt>
+            <h3><i class="fa-solid fa-terminal"></i> AI Dev Tools</h3>
+            <div class="tiles">
+              <span class="tile"><i class="fa-solid fa-gem" style="color:#38bdf8"></i><b>Gemini CLI</b></span>
+              <span class="tile"><i class="fa-solid fa-star" style="color:#ffb347"></i><b>Claude AI</b></span>
+              <span class="tile"><i class="fa-brands fa-github" style="color:#e8eef2"></i><b>Copilot</b></span>
+              <span class="tile"><i class="fa-solid fa-bolt" style="color:#ffd166"></i><b>Grok AI</b></span>
+              <span class="tile"><i class="fa-solid fa-code" style="color:#2dd4bf"></i><b>Codex CLI</b></span>
+            </div>
+          </div>
+
+          <div class="skill-card glass" data-tilt>
+            <h3><i class="fa-solid fa-toolbox"></i> Tools &amp; Workflow</h3>
+            <div class="tiles">
+              <span class="tile"><i class="devicon-git-plain colored"></i><b>Git</b></span>
+              <span class="tile"><i class="devicon-github-original"></i><b>GitHub</b></span>
+              <span class="tile"><i class="devicon-vscode-plain colored"></i><b>VS Code</b></span>
+              <span class="tile"><i class="devicon-jupyter-plain colored"></i><b>Jupyter</b></span>
+              <span class="tile"><i class="fa-brands fa-google" style="color:#4285F4"></i><b>Colab</b></span>
+              <span class="tile"><i class="devicon-figma-plain colored"></i><b>Figma</b></span>
+              <span class="tile"><i class="fa-solid fa-palette" style="color:#a78bfa"></i><b>Canva</b></span>
+            </div>
+          </div>
+
+        </div>
+
+        <h3 class="soft-heading"><i class="fa-solid fa-hand-holding-heart"></i> Soft Skills</h3>
+        <div class="soft-row">
+          <div class="soft-card glass" data-tilt>
+            <span class="soft-card__ic"><i class="fa-solid fa-ear-listen"></i></span>
+            <b>Empathetic Listener</b>
+            <small>I hear people out and understand their perspective before I respond.</small>
+          </div>
+          <div class="soft-card glass" data-tilt>
+            <span class="soft-card__ic"><i class="fa-solid fa-handshake-simple"></i></span>
+            <b>Cooperative Spirit</b>
+            <small>I collaborate openly, share knowledge, and help the team succeed.</small>
+          </div>
+          <div class="soft-card glass" data-tilt>
+            <span class="soft-card__ic"><i class="fa-solid fa-calendar-check"></i></span>
+            <b>Event Planning</b>
+            <small>I organize trips and events end to end — people, logistics, and details.</small>
+          </div>
+          <div class="soft-card glass" data-tilt>
+            <span class="soft-card__ic"><i class="fa-solid fa-user-tie"></i></span>
+            <b>Professionalism</b>
+            <small>Reliable, punctual, and accountable in everything I take on.</small>
+          </div>
+          <div class="soft-card glass" data-tilt>
+            <span class="soft-card__ic"><i class="fa-solid fa-shield-heart"></i></span>
+            <b>Resilience</b>
+            <small>I stay composed under pressure and bounce back stronger from setbacks.</small>
+          </div>
+        </div>
+
+        <h3 class="soft-heading"><i class="fa-solid fa-language"></i> Spoken Languages</h3>
+        <div class="soft-row">
+          <div class="soft-card glass" data-tilt>
+            <span class="soft-card__flag">🇮🇳</span>
+            <b>Tamil</b>
+            <span class="dots" aria-hidden="true"><i class="dot on"></i><i class="dot on"></i><i class="dot on"></i><i class="dot on"></i><i class="dot on"></i></span>
+            <small>Native</small>
+          </div>
+          <div class="soft-card glass" data-tilt>
+            <span class="soft-card__flag">🇬🇧</span>
+            <b>English</b>
+            <span class="dots" aria-hidden="true"><i class="dot on"></i><i class="dot on"></i><i class="dot on"></i><i class="dot on"></i><i class="dot"></i></span>
+            <small>Professional</small>
+          </div>
+          <div class="soft-card glass" data-tilt>
+            <span class="soft-card__flag">🇮🇳</span>
+            <b>Hindi</b>
+            <span class="dots" aria-hidden="true"><i class="dot on"></i><i class="dot on"></i><i class="dot on"></i><i class="dot on"></i><i class="dot"></i></span>
+            <small>Proficient</small>
+          </div>
+          <div class="soft-card glass" data-tilt>
+            <span class="soft-card__flag">🇩🇪</span>
+            <b>German</b>
+            <span class="dots" aria-hidden="true"><i class="dot on"></i><i class="dot"></i><i class="dot"></i><i class="dot"></i><i class="dot"></i></span>
+            <small>Basic</small>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== Projects (placeholder) ===== -->
+    <section class="section" id="projects">
+      <div class="container">
+        <h2 class="section__title"><span class="section__num">★</span> Projects</h2>
+        <div class="projects-soon glass">
+          <i class="fa-solid fa-rocket"></i>
+          <h3>Featured projects coming soon</h3>
+          <p>I'm putting together detailed, polished case studies of my work. Check back shortly — or reach out and I'll walk you through what I'm building.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== Education ===== -->
+    <section class="section" id="education">
+      <div class="container">
+        <h2 class="section__title"><span class="section__num">05.</span> Education</h2>
+        <div class="edu-grid">
+          <article class="edu-card glass">
+            <div class="edu-card__head">
+              <span class="badge">2022 — 2026</span>
+              <h3>B.E. Computer Science &amp; Engineering</h3>
+              <p class="edu-card__inst"><i class="fa-solid fa-building-columns"></i> SNS College of Technology</p>
+            </div>
+            <button class="edu-photo" data-full="assets/college.jpg" data-cap="SNS College — Campus" data-hover>
+              <img src="assets/college.jpg" alt="SNS College of Technology campus" loading="lazy"
+                   onerror="this.style.display='none';this.nextElementSibling.style.display='grid'" />
+              <span class="edu-photo__fallback"><i class="fa-solid fa-building-columns"></i></span>
+              <span class="edu-photo__cap">Campus</span>
+            </button>
+            <div class="edu-card__details">
+              <p class="edu-card__loc"><i class="fa-solid fa-location-dot"></i> Coimbatore, Tamil Nadu, India</p>
+              <p class="edu-card__grade"><i class="fa-solid fa-award"></i> CGPA: <strong>8.66 / 10</strong></p>
+            </div>
+            <button class="edu-photo" data-full="assets/college-group.jpg" data-cap="SNS College of Technology — Class Group" data-hover>
+              <img src="assets/college-group.jpg" alt="SNS College class group photo" loading="lazy"
+                   onerror="this.style.display='none';this.nextElementSibling.style.display='grid'" />
+              <span class="edu-photo__fallback"><i class="fa-solid fa-people-group"></i></span>
+              <span class="edu-photo__cap">Class Group</span>
+            </button>
+            <p class="edu-card__note"><i class="fa-solid fa-quote-left"></i> This is where my career truly began. The mentors who guided me and the friends beside me turned this journey into something I'll always cherish — they've been my biggest support in building my career.</p>
+          </article>
+
+          <article class="edu-card glass">
+            <div class="edu-card__head">
+              <span class="badge">2007 — 2022</span>
+              <h3>Schooling (Pre-KG to Higher Secondary)</h3>
+              <p class="edu-card__inst"><i class="fa-solid fa-school"></i> Dr. P.G.V Matric Higher Secondary School</p>
+            </div>
+            <button class="edu-photo" data-full="assets/school.jpg" data-cap="Dr. P.G.V Matric Hr. Sec. School — Campus" data-hover>
+              <img src="assets/school.jpg" alt="Dr. P.G.V Matric Higher Secondary School" loading="lazy"
+                   onerror="this.style.display='none';this.nextElementSibling.style.display='grid'" />
+              <span class="edu-photo__fallback"><i class="fa-solid fa-school"></i></span>
+              <span class="edu-photo__cap">Campus</span>
+            </button>
+            <div class="edu-card__details">
+              <p class="edu-card__loc"><i class="fa-solid fa-location-dot"></i> Coimbatore, Tamil Nadu, India</p>
+              <p class="edu-card__grade"><i class="fa-solid fa-award"></i> HSC: <strong>84%</strong> &nbsp;·&nbsp; SSLC: <strong>86%</strong></p>
+            </div>
+            <button class="edu-photo" data-full="assets/school-group.jpg" data-cap="Dr. P.G.V Matric Hr. Sec. School — Class Group" data-hover>
+              <img src="assets/school-group.jpg" alt="School class group photo" loading="lazy"
+                   onerror="this.style.display='none';this.nextElementSibling.style.display='grid'" />
+              <span class="edu-photo__fallback"><i class="fa-solid fa-people-group"></i></span>
+              <span class="edu-photo__cap">Class Group</span>
+            </button>
+            <p class="edu-card__note"><i class="fa-solid fa-quote-left"></i> This is where it all began — I studied here from Pre-KG to Class 12. The teachers, values, and friends I grew up with shaped my foundation and gave me the confidence to chase bigger dreams.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== Achievements ===== -->
+    <section class="section" id="achievements">
+      <div class="container">
+        <h2 class="section__title"><span class="section__num">06.</span> Achievements &amp; Certifications</h2>
+        <div class="ach-group">
+          <h3 class="ach-subtitle"><i class="fa-solid fa-trophy"></i> Achievements &amp; Awards</h3>
+          <div class="ach-grid">
+            <div class="ach-card ach-card--star glass" data-tilt>
+              <i class="fa-solid fa-trophy"></i>
+              <div class="ach-card__txt"><strong>National-Level Abacus Competition</strong><small>Secured 3rd Position (National Winner)</small></div>
+            </div>
+            <div class="ach-card glass" data-tilt>
+              <i class="fa-solid fa-palette"></i>
+              <div class="ach-card__txt"><strong>Drawing — District-Level Runner-Up</strong><small>Pencil-shading / art competition</small></div>
+            </div>
+            <div class="ach-card glass" data-tilt>
+              <i class="fa-solid fa-medal"></i>
+              <div class="ach-card__txt"><strong>Runner-Up — Idea Presentation</strong><small>QUANIX '23</small></div>
+            </div>
+            <div class="ach-card glass" data-tilt>
+              <i class="fa-solid fa-code"></i>
+              <div class="ach-card__txt"><strong>Coding Contest Finalist</strong><small>CIT 2024</small></div>
+            </div>
+            <div class="ach-card glass" data-tilt>
+              <i class="fa-brands fa-google"></i>
+              <div class="ach-card__txt"><strong>Google AI Hackathon</strong><small>Participant</small></div>
+            </div>
+          </div>
+        </div>
+
+        <div class="ach-group">
+          <h3 class="ach-subtitle"><i class="fa-solid fa-certificate"></i> Certifications &amp; Proficiency</h3>
+          <div class="ach-grid">
+            <div class="ach-card glass" data-tilt>
+              <i class="fa-brands fa-microsoft"></i>
+              <div class="ach-card__txt"><strong>Microsoft Certified — Azure AI</strong><small>Cloud AI certification</small></div>
+            </div>
+            <div class="ach-card glass" data-tilt>
+              <i class="fa-solid fa-chart-simple"></i>
+              <div class="ach-card__txt"><strong>Data Science Certification</strong><small>PrepInsta</small></div>
+            </div>
+            <div class="ach-card glass" data-tilt>
+              <i class="fa-solid fa-user-shield"></i>
+              <div class="ach-card__txt"><strong>NPTEL Certification</strong><small>Privacy &amp; Security in Online Social Media</small></div>
+            </div>
+            <div class="ach-card glass" data-tilt>
+              <i class="fa-solid fa-language"></i>
+              <div class="ach-card__txt"><strong>IELTS — English Proficiency</strong><small>Overall Band Score: 6.5 / 9</small></div>
+            </div>
+            <div class="ach-card glass" data-tilt>
+              <i class="fa-solid fa-book-open-reader"></i>
+              <div class="ach-card__txt"><strong>Hindi Proficiency</strong><small>Completed all levels, from Prathmik to Praveen Uttarardh — Dakshin Bharat Hindi Prachar Sabha</small></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== Hobbies & Interests ===== -->
+    <section class="section" id="hobbies">
+      <div class="container">
+        <h2 class="section__title"><span class="section__num">07.</span> Beyond the Code</h2>
+        <div class="hobby-grid">
+          <article class="hobby-card hobby-card--wide glass" data-tilt>
+            <div class="hobby-card__head"><i class="fa-solid fa-basketball"></i><h3>Sports</h3></div>
+            <p class="hobby-card__lead">On the court and the field — a born athlete at heart, competitive, and fully committed to every sport I play.</p>
+            <div class="hobby-tags">
+              <span class="hobby-tag hobby-tag--hot"><i class="fa-solid fa-basketball"></i> Basketball · <em>Regional-level player</em></span>
+              <span class="hobby-tag"><i class="fa-solid fa-futbol"></i> Football</span>
+              <span class="hobby-tag"><i class="fa-solid fa-baseball-bat-ball"></i> Cricket</span>
+              <span class="hobby-tag"><i class="fa-solid fa-table-tennis-paddle-ball"></i> Badminton</span>
+            </div>
+          </article>
+
+          <article class="hobby-card hobby-card--wide glass" data-tilt>
+            <div class="hobby-card__head"><i class="fa-solid fa-pen-nib"></i><h3>Drawing &amp; Pencil Shading</h3></div>
+            <p class="hobby-card__lead">Sketching is my favourite way to unwind — I lose myself in detailed pencil-shading work, where patience and focus turn a blank page into something meaningful.</p>
+            <div class="hobby-tags" style="margin-bottom:1.1rem">
+              <span class="hobby-tag hobby-tag--hot"><i class="fa-solid fa-medal"></i> Drawing · <em>District-level Runner-Up</em></span>
+            </div>
+            <a href="https://drive.google.com/drive/folders/1D4dJk-fCtgo6o0NyqRaJa3povnANi_q3" target="_blank" rel="noopener" class="hobby-link" data-hover><i class="fa-brands fa-google-drive"></i> View my artwork</a>
+          </article>
+
+          <article class="hobby-card glass" data-tilt>
+            <div class="hobby-card__head"><i class="fa-solid fa-headphones-simple"></i><h3>Music</h3></div>
+            <p>There's always something playing in my ears — music is my daily reset button, keeping me focused, energized, and inspired.</p>
+          </article>
+
+          <article class="hobby-card glass" data-tilt>
+            <div class="hobby-card__head"><i class="fa-solid fa-clapperboard"></i><h3>Films &amp; Web Series</h3></div>
+            <p>A big fan of great storytelling — from binge-worthy web series to the latest films. Nothing refreshes me quite like catching a movie on the big screen at the theatre.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== Contact ===== -->
+    <section class="section section--contact" id="contact">
+      <div class="container contact">
+        <p class="section__num">What's next?</p>
+        <h2 class="contact__title gradient-text">Let's build something together</h2>
+        <p class="contact__text">
+          Great ideas deserve great execution. I'm always open to meaningful
+          collaborations and projects where we can create real impact — if you
+          have a vision, let's connect and bring it to life together.
+        </p>
+        <a href="mailto:mkmukund11@gmail.com" class="btn btn--primary btn--lg" data-hover>
+          <i class="fa-regular fa-envelope"></i> Say Hello
+        </a>
+
+        <div class="contact__list glass">
+          <a href="mailto:mkmukund11@gmail.com" class="contact-row" data-hover>
+            <span class="contact-row__ic"><i class="fa-regular fa-envelope"></i></span>
+            <span class="contact-row__txt"><b>Email</b><small>mkmukund11@gmail.com</small></span>
+            <i class="fa-solid fa-arrow-right contact-row__go"></i>
+          </a>
+          <a href="tel:+919384451041" class="contact-row" data-hover>
+            <span class="contact-row__ic"><i class="fa-solid fa-phone"></i></span>
+            <span class="contact-row__txt"><b>Phone</b><small>+91 93844 51041</small></span>
+            <i class="fa-solid fa-arrow-right contact-row__go"></i>
+          </a>
+          <a href="https://www.linkedin.com/in/mukund-m-k/" target="_blank" rel="noopener" class="contact-row" data-hover>
+            <span class="contact-row__ic"><i class="fa-brands fa-linkedin-in"></i></span>
+            <span class="contact-row__txt"><b>LinkedIn</b><small>in/mukund-m-k</small></span>
+            <i class="fa-solid fa-arrow-up-right-from-square contact-row__go"></i>
+          </a>
+          <a href="https://github.com/thisisMUKUND11" target="_blank" rel="noopener" class="contact-row" data-hover>
+            <span class="contact-row__ic"><i class="fa-brands fa-github"></i></span>
+            <span class="contact-row__txt"><b>GitHub</b><small>thisisMUKUND11</small></span>
+            <i class="fa-solid fa-arrow-up-right-from-square contact-row__go"></i>
+          </a>
+          <a href="https://www.instagram.com/mukund_.11._?igsh=a21lNnc0Z21qN2x3" target="_blank" rel="noopener" class="contact-row" data-hover>
+            <span class="contact-row__ic"><i class="fa-brands fa-instagram"></i></span>
+            <span class="contact-row__txt"><b>Instagram</b><small>@mukund_.11._</small></span>
+            <i class="fa-solid fa-arrow-up-right-from-square contact-row__go"></i>
+          </a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ===== Lightbox ===== -->
+  <div class="lightbox" id="lightbox" aria-hidden="true">
+    <button class="lightbox__close" id="lightboxClose" aria-label="Close" data-hover><i class="fa-solid fa-xmark"></i></button>
+    <button class="lightbox__nav lightbox__prev" id="lightboxPrev" aria-label="Previous" data-hover><i class="fa-solid fa-chevron-left"></i></button>
+    <figure class="lightbox__figure">
+      <img id="lightboxImg" src="" alt="" />
+      <figcaption id="lightboxCap"></figcaption>
+    </figure>
+    <button class="lightbox__nav lightbox__next" id="lightboxNext" aria-label="Next" data-hover><i class="fa-solid fa-chevron-right"></i></button>
+  </div>
+
+  <footer class="footer">
+    <div class="container footer__inner">
+      <a href="#hero" class="nav__logo" data-hover>Mukund M K</a>
+      <p>Designed &amp; built by <strong>Mukund M K</strong> · <span id="year"></span></p>
+      <a href="#hero" class="footer__top" data-hover aria-label="Back to top"><i class="fa-solid fa-arrow-up"></i></a>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

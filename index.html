@@ -72,7 +72,8 @@
           <li><a href="#education" data-hover><span>05.</span> Education</a></li>
           <li><a href="#achievements" data-hover><span>06.</span> Achievements</a></li>
           <li><a href="#hobbies" data-hover><span>07.</span> Hobbies</a></li>
-          <li><a href="#contact" data-hover><span>08.</span> Contact</a></li>
+          <li><a href="#inspirations" data-hover><span>08.</span> Inspirations</a></li>
+          <li><a href="#contact" data-hover><span>09.</span> Contact</a></li>
           <li><a href="assets/Mukund_M_K_Resume.pdf" target="_blank" rel="noopener" class="nav__resume btn-mini" data-hover>Resume</a></li>
         </ul>
       </nav>
@@ -115,7 +116,7 @@
             <div class="orbit__ring orbit__ring--2"></div>
             <!-- Illustrated avatar (assets/avatar.png) -->
             <div class="avatar" data-tilt>
-              <img src="assets/avatar.png" alt="Mukund M K — AI/ML developer illustration"
+              <img src="assets/avatar.jpg" alt="Mukund M K — AI/ML developer illustration"
                    onerror="this.style.display='none';this.nextElementSibling.style.display='grid'" />
               <div class="avatar__fallback">MK</div>
             </div>
@@ -555,7 +556,17 @@
             <div class="hobby-tags" style="margin-bottom:1.1rem">
               <span class="hobby-tag hobby-tag--hot"><i class="fa-solid fa-medal"></i> Drawing · <em>District-level Runner-Up</em></span>
             </div>
-            <a href="https://drive.google.com/drive/folders/1D4dJk-fCtgo6o0NyqRaJa3povnANi_q3" target="_blank" rel="noopener" class="hobby-link" data-hover><i class="fa-brands fa-google-drive"></i> View my artwork</a>
+            <button class="draw-toggle" id="drawToggle" aria-expanded="false" aria-controls="drawGallery" data-hover><i class="fa-solid fa-images"></i> View my drawings</button>
+            <div class="draw-gallery" id="drawGallery" hidden>
+              <button class="draw-thumb" data-full="assets/drawing-1.jpg" data-cap="Pencil Shading — Artwork by Mukund M K" data-hover><img src="assets/drawing-1.jpg" alt="Pencil drawing by Mukund M K" loading="lazy" /></button>
+              <button class="draw-thumb" data-full="assets/drawing-2.jpg" data-cap="Pencil Shading — Artwork by Mukund M K" data-hover><img src="assets/drawing-2.jpg" alt="Pencil drawing by Mukund M K" loading="lazy" /></button>
+              <button class="draw-thumb" data-full="assets/drawing-3.jpg" data-cap="Pencil Shading — Artwork by Mukund M K" data-hover><img src="assets/drawing-3.jpg" alt="Pencil drawing by Mukund M K" loading="lazy" /></button>
+              <button class="draw-thumb" data-full="assets/drawing-4.jpg" data-cap="Pencil Shading — Artwork by Mukund M K" data-hover><img src="assets/drawing-4.jpg" alt="Pencil drawing by Mukund M K" loading="lazy" /></button>
+              <button class="draw-thumb" data-full="assets/drawing-5.jpg" data-cap="Pencil Shading — Artwork by Mukund M K" data-hover><img src="assets/drawing-5.jpg" alt="Pencil drawing by Mukund M K" loading="lazy" /></button>
+              <button class="draw-thumb" data-full="assets/drawing-6.jpg" data-cap="Pencil Shading — Artwork by Mukund M K" data-hover><img src="assets/drawing-6.jpg" alt="Pencil drawing by Mukund M K" loading="lazy" /></button>
+              <button class="draw-thumb" data-full="assets/drawing-7.jpg" data-cap="Pencil Shading — Artwork by Mukund M K" data-hover><img src="assets/drawing-7.jpg" alt="Pencil drawing by Mukund M K" loading="lazy" /></button>
+              <button class="draw-thumb" data-full="assets/drawing-8.jpg" data-cap="Pencil Shading — Artwork by Mukund M K" data-hover><img src="assets/drawing-8.jpg" alt="Pencil drawing by Mukund M K" loading="lazy" /></button>
+            </div>
           </article>
 
           <article class="hobby-card glass" data-tilt>
@@ -566,6 +577,59 @@
           <article class="hobby-card glass" data-tilt>
             <div class="hobby-card__head"><i class="fa-solid fa-clapperboard"></i><h3>Films &amp; Web Series</h3></div>
             <p>A big fan of great storytelling — from binge-worthy web series to the latest films. Nothing refreshes me quite like catching a movie on the big screen at the theatre.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== Inspirations ===== -->
+    <section class="section" id="inspirations">
+      <div class="container">
+        <h2 class="section__title"><span class="section__num">08.</span> My Inspirations</h2>
+        <p class="inspire-intro">
+          These three have been my <strong>role models since childhood</strong>, and I've admired
+          them for as long as I can remember. What inspires me most is not just their achievements,
+          but their unwavering <strong>loyalty</strong> to what they do and their commitment to their
+          families. Each of them reached the highest level of success with a completely different
+          mindset and personality, proving that there is no single path to greatness. As I grew up,
+          I came to appreciate the discipline, consistency, resilience, and dedication behind their
+          success — those are the same values I strive to carry into my own career and everyday life.
+        </p>
+        <div class="inspire-grid">
+          <article class="inspire-card glass" data-tilt>
+            <div class="inspire-card__media">
+              <img src="assets/lebron.jpg" alt="LeBron James"
+                   onerror="this.style.display='none';this.nextElementSibling.style.display='grid'" />
+              <span class="inspire-card__ic" style="color:#f0a830"><i class="fa-solid fa-basketball"></i></span>
+            </div>
+            <h3>LeBron James</h3>
+            <p class="inspire-card__role">Basketball · King James</p>
+            <p class="inspire-card__why">Relentless discipline, leadership, and longevity. The way he keeps evolving year after year — loyal to his game and devoted to his family — pushes me to keep raising my own standards.</p>
+            <p class="inspire-card__quote"><i class="fa-solid fa-quote-left"></i> Nothing is given. Everything is earned.</p>
+          </article>
+
+          <article class="inspire-card glass" data-tilt>
+            <div class="inspire-card__media">
+              <img src="assets/messi.jpg" alt="Lionel Messi"
+                   onerror="this.style.display='none';this.nextElementSibling.style.display='grid'" />
+              <span class="inspire-card__ic" style="color:#38bdf8"><i class="fa-solid fa-futbol"></i></span>
+            </div>
+            <h3>Lionel Messi</h3>
+            <p class="inspire-card__role">Football · GOAT</p>
+            <p class="inspire-card__why">Quiet humility and unmatched consistency. He lets his work do the talking and stays grounded — his loyalty to his club, country, and family is something I deeply admire.</p>
+            <p class="inspire-card__quote"><i class="fa-solid fa-quote-left"></i> You have to fight to reach your dream. You have to sacrifice and work hard for it.</p>
+          </article>
+
+          <article class="inspire-card glass" data-tilt>
+            <div class="inspire-card__media">
+              <img src="assets/dhoni.jpg" alt="MS Dhoni"
+                   onerror="this.style.display='none';this.nextElementSibling.style.display='grid'" />
+              <span class="inspire-card__ic" style="color:#ffd166"><i class="fa-solid fa-baseball-bat-ball"></i></span>
+            </div>
+            <h3>MS Dhoni</h3>
+            <p class="inspire-card__role">Cricket · Captain Cool</p>
+            <p class="inspire-card__why">Calm and composed no matter the pressure — he handles every situation, even his own anger, with incredible composure. That unshakable mindset is exactly what I aspire to.</p>
+            <p class="inspire-card__quote"><i class="fa-solid fa-quote-left"></i> You should never be too high or too low — keep a calm, balanced mind.</p>
           </article>
         </div>
       </div>

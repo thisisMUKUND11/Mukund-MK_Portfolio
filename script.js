@@ -56,7 +56,7 @@ if (rotator && !prefersReduced) {
 
 /* ---------- Reveal on scroll ---------- */
 const revealEls = document.querySelectorAll(
-  ".section__title, .about__text, .stat-card, .tl-item, .mentor-card, .skill-card, .soft-card, .projects-soon, .edu-card, .ach-card, .hobby-card, .contact, .hero__content"
+  ".section__title, .about__text, .stat-card, .tl-item, .mentor-card, .skill-card, .soft-card, .projects-soon, .edu-card, .ach-card, .hobby-card, .inspire-card, .contact, .hero__content"
 );
 revealEls.forEach((el, i) => {
   el.classList.add("reveal");
@@ -161,13 +161,32 @@ if (!prefersReduced && window.matchMedia("(pointer: fine)").matches) {
   draw();
 })();
 
+/* ---------- Drawing gallery toggle ---------- */
+(function drawToggle() {
+  const btn = document.getElementById("drawToggle");
+  const gallery = document.getElementById("drawGallery");
+  if (!btn || !gallery) return;
+  btn.addEventListener("click", () => {
+    const willShow = gallery.hasAttribute("hidden");
+    if (willShow) {
+      gallery.removeAttribute("hidden");
+      btn.innerHTML = '<i class="fa-solid fa-chevron-up"></i> Hide drawings';
+      btn.setAttribute("aria-expanded", "true");
+    } else {
+      gallery.setAttribute("hidden", "");
+      btn.innerHTML = '<i class="fa-solid fa-images"></i> View my drawings';
+      btn.setAttribute("aria-expanded", "false");
+    }
+  });
+})();
+
 /* ---------- Lightbox gallery ---------- */
 (function lightbox() {
   const box = document.getElementById("lightbox");
   if (!box) return;
   const img = document.getElementById("lightboxImg");
   const cap = document.getElementById("lightboxCap");
-  const photos = Array.from(document.querySelectorAll(".edu-photo"));
+  const photos = Array.from(document.querySelectorAll(".edu-photo, .draw-thumb"));
   let idx = 0;
 
   function show(i) {

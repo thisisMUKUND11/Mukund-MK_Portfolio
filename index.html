@@ -71,6 +71,7 @@
           <li><a href="#experience" data-hover><span>02.</span> Experience</a></li>
           <li><a href="#mentorship" data-hover><span>03.</span> Mentorship</a></li>
           <li><a href="#skills" data-hover><span>04.</span> Skills</a></li>
+          <li><a href="#projects" data-hover><span>★</span> Projects</a></li>
           <li><a href="#education" data-hover><span>05.</span> Education</a></li>
           <li><a href="#achievements" data-hover><span>06.</span> Achievements</a></li>
           <li><a href="#hobbies" data-hover><span>07.</span> Hobbies</a></li>
@@ -408,14 +409,58 @@
       </div>
     </section>
 
-    <!-- ===== Projects (placeholder) ===== -->
+    <!-- ===== Projects ===== -->
     <section class="section" id="projects">
       <div class="container">
         <h2 class="section__title"><span class="section__num">★</span> Projects</h2>
-        <div class="projects-soon glass">
-          <i class="fa-solid fa-rocket"></i>
-          <h3>Featured projects coming soon</h3>
-          <p>I'm putting together detailed, polished case studies of my work. Check back shortly — or reach out and I'll walk you through what I'm building.</p>
+        <div class="projects">
+          <article class="project-card glass">
+            <div class="project-card__info">
+              <div class="project-card__head">
+                <img class="project-card__icon" src="assets/loanwise-icon.png" alt="LoanWise app icon" />
+                <div>
+                  <h3>LoanWise</h3>
+                  <p class="project-card__tagline">Smart Loan Approval Predictions</p>
+                </div>
+              </div>
+
+              <div class="project-badges">
+                <span class="project-badge project-badge--hot"><i class="fa-solid fa-bullseye"></i> 97.3% accuracy</span>
+                <span class="project-badge"><i class="fa-solid fa-bolt"></i> Real-time</span>
+                <span class="project-badge"><i class="fa-solid fa-shield-halved"></i> JWT Auth</span>
+                <span class="project-badge"><i class="fa-solid fa-file-pdf"></i> PDF Report</span>
+              </div>
+
+              <p class="project-card__desc">
+                A full-stack, ML-powered loan approval prediction system. Users submit their
+                financial details through a <strong>Flutter</strong> app; a <strong>FastAPI</strong>
+                backend authenticates the request and runs a trained <strong>scikit-learn Random
+                Forest</strong> model (97.3% accuracy) to predict approval in real time. The result —
+                approval probability, risk level, and personalized recommendations — is returned to
+                the app, saved to the user's history, and exportable as a PDF report.
+              </p>
+
+              <div class="project-stack">
+                <div class="project-stack__row"><span class="project-stack__label">Frontend</span><span class="project-tags"><span>Flutter</span><span>Provider</span><span>Dio (JWT)</span><span>fl_chart</span><span>pdf/printing</span></span></div>
+                <div class="project-stack__row"><span class="project-stack__label">Backend</span><span class="project-tags"><span>FastAPI</span><span>Pydantic v2</span><span>SQLAlchemy 2.0</span><span>Alembic</span><span>PyJWT</span><span>bcrypt</span></span></div>
+                <div class="project-stack__row"><span class="project-stack__label">ML</span><span class="project-tags"><span>scikit-learn</span><span>Random Forest</span><span>pandas</span><span>NumPy</span><span>joblib</span></span></div>
+                <div class="project-stack__row"><span class="project-stack__label">Database</span><span class="project-tags"><span>SQLite</span><span>PostgreSQL</span></span></div>
+                <div class="project-stack__row"><span class="project-stack__label">Tools</span><span class="project-tags"><span>Git &amp; GitHub</span><span>pytest</span><span>httpx</span></span></div>
+              </div>
+
+              <div class="project-card__links">
+                <a class="btn btn--primary" href="https://github.com/thisisMUKUND11/Loan_Prediction" target="_blank" rel="noopener" data-hover><i class="fa-brands fa-github"></i> View Code</a>
+                <a class="btn btn--ghost" href="assets/loanwise-report.pdf" target="_blank" rel="noopener" data-hover><i class="fa-solid fa-file-pdf"></i> Sample Report</a>
+              </div>
+            </div>
+
+            <div class="project-shots">
+              <button class="proj-shot" data-full="assets/loanwise-1.jpg" data-cap="LoanWise — Loan Application" data-hover><img src="assets/loanwise-1.jpg" alt="LoanWise loan application screen" loading="lazy" /></button>
+              <button class="proj-shot" data-full="assets/loanwise-2.jpg" data-cap="LoanWise — App Screen" data-hover><img src="assets/loanwise-2.jpg" alt="LoanWise app screen" loading="lazy" /></button>
+              <button class="proj-shot" data-full="assets/loanwise-3.jpg" data-cap="LoanWise — App Screen" data-hover><img src="assets/loanwise-3.jpg" alt="LoanWise app screen" loading="lazy" /></button>
+              <button class="proj-shot" data-full="assets/loanwise-4.jpg" data-cap="LoanWise — Prediction Result" data-hover><img src="assets/loanwise-4.jpg" alt="LoanWise prediction result screen" loading="lazy" /></button>
+            </div>
+          </article>
         </div>
       </div>
     </section>

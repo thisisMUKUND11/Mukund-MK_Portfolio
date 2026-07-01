@@ -56,7 +56,7 @@ if (rotator && !prefersReduced) {
 
 /* ---------- Reveal on scroll ---------- */
 const revealEls = document.querySelectorAll(
-  ".section__title, .about__text, .stat-card, .tl-item, .mentor-card, .skill-card, .soft-card, .projects-soon, .edu-card, .ach-card, .hobby-card, .inspire-card, .contact, .hero__content"
+  ".section__title, .about__text, .stat-card, .tl-item, .mentor-card, .skill-card, .soft-card, .project-card, .edu-card, .ach-card, .hobby-card, .inspire-card, .contact, .hero__content"
 );
 revealEls.forEach((el, i) => {
   el.classList.add("reveal");
@@ -186,7 +186,7 @@ if (!prefersReduced && window.matchMedia("(pointer: fine)").matches) {
   if (!box) return;
   const img = document.getElementById("lightboxImg");
   const cap = document.getElementById("lightboxCap");
-  const photos = Array.from(document.querySelectorAll(".edu-photo, .draw-thumb"));
+  const photos = Array.from(document.querySelectorAll(".edu-photo, .draw-thumb, .proj-shot"));
   let idx = 0;
 
   function show(i) {

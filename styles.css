@@ -527,6 +527,7 @@ img { max-width: 100%; display: block; }
   .edu-grid { grid-template-columns: 1fr; }
   .mentor-grid { grid-template-columns: 1fr; }
   .about { grid-template-columns: 1fr; }
+  .about__photo-col { order: -1; aspect-ratio: 16 / 10; min-height: 0; }
   .ach-grid { grid-template-columns: repeat(3, 1fr); }
 }
 

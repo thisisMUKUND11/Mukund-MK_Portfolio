@@ -43,6 +43,8 @@
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
+  <a href="#main" class="skip-link">Skip to main content</a>
+
   <!-- ===== Animated background layers ===== -->
   <div class="bg">
     <div class="bg__grid"></div>
@@ -80,7 +82,7 @@
     </div>
   </header>
 
-  <main>
+  <main id="main" tabindex="-1">
     <!-- ===== Hero ===== -->
     <section class="hero" id="hero">
       <div class="container hero__inner">
@@ -130,8 +132,8 @@
     <section class="section" id="about">
       <div class="container">
         <h2 class="section__title"><span class="section__num">01.</span> About Me</h2>
-        <div class="about">
-          <div class="about__text glass">
+        <div class="about glass">
+          <div class="about__text">
             <p>
               I'm <strong>Mukund M K</strong> — a Computer Science &amp; Engineering
               student and AI/ML developer from Coimbatore, India, driven by one

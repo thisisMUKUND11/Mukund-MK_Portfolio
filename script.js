@@ -17,18 +17,21 @@ window.addEventListener("scroll", () => {
   document.getElementById("progress").style.width = scrolled + "%";
 });
 
+function closeMenu() {
+  links.classList.remove("open");
+  toggle.classList.remove("open");
+  toggle.setAttribute("aria-expanded", "false");
+}
 toggle.addEventListener("click", () => {
   const open = links.classList.toggle("open");
   toggle.classList.toggle("open", open);
   toggle.setAttribute("aria-expanded", String(open));
 });
-links.querySelectorAll("a").forEach((a) =>
-  a.addEventListener("click", () => {
-    links.classList.remove("open");
-    toggle.classList.remove("open");
-    toggle.setAttribute("aria-expanded", "false");
-  })
-);
+const navClose = document.getElementById("navClose");
+if (navClose) navClose.addEventListener("click", closeMenu);
+links.querySelectorAll("a").forEach((a) => a.addEventListener("click", closeMenu));
+// Close the menu with Escape
+document.addEventListener("keydown", (e) => { if (e.key === "Escape") closeMenu(); });
 
 /* ---------- Rotating subtitle words ---------- */
 const rotator = document.getElementById("rotator");

@@ -67,6 +67,7 @@
           <span></span><span></span><span></span>
         </button>
         <ul class="nav__links" id="navLinks">
+          <li class="nav__close-wrap"><button class="nav__close" id="navClose" aria-label="Close menu"><i class="fa-solid fa-xmark"></i></button></li>
           <li><a href="#about" data-hover><span>01.</span> About</a></li>
           <li><a href="#experience" data-hover><span>02.</span> Experience</a></li>
           <li><a href="#mentorship" data-hover><span>03.</span> Mentorship</a></li>
@@ -108,7 +109,6 @@
           <ul class="hero__socials">
             <li><a href="https://github.com/thisisMUKUND11" target="_blank" rel="noopener" aria-label="GitHub" data-hover><i class="fa-brands fa-github"></i></a></li>
             <li><a href="https://www.linkedin.com/in/mukund-m-k/" target="_blank" rel="noopener" aria-label="LinkedIn" data-hover><i class="fa-brands fa-linkedin-in"></i></a></li>
-            <li><a href="https://www.instagram.com/mukund_.11._?igsh=a21lNnc0Z21qN2x3" target="_blank" rel="noopener" aria-label="Instagram" data-hover><i class="fa-brands fa-instagram"></i></a></li>
             <li><a href="mailto:mkmukund11@gmail.com" aria-label="Email" data-hover><i class="fa-regular fa-envelope"></i></a></li>
           </ul>
         </div>
@@ -417,6 +417,59 @@
           <article class="project-card glass">
             <div class="project-card__info">
               <div class="project-card__head">
+                <img class="project-card__icon" src="assets/devreel-icon.png" alt="DevReel app icon" />
+                <div>
+                  <h3>DevReel</h3>
+                  <p class="project-card__tagline">Proof-of-work from your GitHub</p>
+                </div>
+              </div>
+
+              <div class="project-badges">
+                <span class="project-badge project-badge--hot"><i class="fa-solid fa-wand-magic-sparkles"></i> AI-generated</span>
+                <span class="project-badge"><i class="fa-solid fa-bolt"></i> ~30-second setup</span>
+                <span class="project-badge"><i class="fa-brands fa-github"></i> GitHub-powered</span>
+                <span class="project-badge"><i class="fa-solid fa-qrcode"></i> Link · QR · PDF</span>
+              </div>
+
+              <p class="project-card__desc">
+                DevReel instantly turns anyone's <strong>GitHub</strong> into a clean, recruiter-friendly
+                portfolio on a single shareable link. Instead of digging through code, a recruiter sees
+                each project explained in plain words — <strong>what it is and why it matters</strong> —
+                as an easy, swipeable showcase, complete with a QR code and a one-page PDF. In short: it
+                saves recruiters time and helps developers stand out.
+              </p>
+
+              <div class="project-stack">
+                <div class="project-stack__row"><span class="project-stack__label">Frontend</span><span class="project-tags"><span>Next.js 15</span><span>React 19</span><span>TypeScript</span><span>Tailwind</span><span>Framer Motion</span><span>next/og</span></span></div>
+                <div class="project-stack__row"><span class="project-stack__label">Backend</span><span class="project-tags"><span>FastAPI</span><span>Pydantic v2</span><span>httpx (async)</span></span></div>
+                <div class="project-stack__row"><span class="project-stack__label">AI</span><span class="project-tags"><span>Google Gemini 2.5</span><span>google-genai</span><span>Rules-based fallback</span></span></div>
+                <div class="project-stack__row"><span class="project-stack__label">Data</span><span class="project-tags"><span>GitHub REST API</span><span>SQLite</span><span>Postgres-ready</span></span></div>
+                <div class="project-stack__row"><span class="project-stack__label">Deploy</span><span class="project-tags"><span>Vercel</span><span>Render / Railway</span></span></div>
+                <div class="project-stack__row"><span class="project-stack__label">Tooling</span><span class="project-tags"><span>Claude AI</span><span>GitHub Copilot</span><span>Canva</span></span></div>
+              </div>
+
+              <p class="project-usecase"><i class="fa-solid fa-lightbulb"></i> <strong>Real-world use:</strong> Gives developers — especially students and job-seekers — a fast, professional way to present their work, and lets recruiters review a candidate in seconds instead of scanning raw code.</p>
+
+              <div class="project-card__links">
+                <a class="btn btn--primary" href="https://github.com/thisisMUKUND11/DeveloperDeck-Git-CV-" target="_blank" rel="noopener" data-hover><i class="fa-brands fa-github"></i> View Code</a>
+                <a class="btn btn--ghost" href="assets/devreel-report.pdf" target="_blank" rel="noopener" data-hover><i class="fa-solid fa-file-pdf"></i> Sample Report</a>
+              </div>
+            </div>
+
+            <div class="project-gallery">
+              <span class="project-gallery__label"><i class="fa-solid fa-display"></i> App Screens <em>— tap any screen to enlarge</em></span>
+              <div class="project-shots project-shots--wide">
+                <button class="proj-shot" data-full="assets/devreel-1.jpg" data-cap="DevReel — Landing" data-hover><img src="assets/devreel-1.jpg" alt="DevReel landing page" loading="lazy" /></button>
+                <button class="proj-shot" data-full="assets/devreel-2.jpg" data-cap="DevReel — Portfolio Deck" data-hover><img src="assets/devreel-2.jpg" alt="DevReel portfolio deck" loading="lazy" /></button>
+                <button class="proj-shot" data-full="assets/devreel-3.jpg" data-cap="DevReel — Project Detail" data-hover><img src="assets/devreel-3.jpg" alt="DevReel project detail" loading="lazy" /></button>
+                <button class="proj-shot" data-full="assets/devreel-4.jpg" data-cap="DevReel — Share & Export" data-hover><img src="assets/devreel-4.jpg" alt="DevReel share and export" loading="lazy" /></button>
+              </div>
+            </div>
+          </article>
+
+          <article class="project-card glass">
+            <div class="project-card__info">
+              <div class="project-card__head">
                 <img class="project-card__icon" src="assets/loanwise-icon.png" alt="LoanWise app icon" />
                 <div>
                   <h3>LoanWise</h3>
@@ -432,12 +485,11 @@
               </div>
 
               <p class="project-card__desc">
-                A full-stack, ML-powered loan approval prediction system. Users submit their
-                financial details through a <strong>Flutter</strong> app; a <strong>FastAPI</strong>
-                backend authenticates the request and runs a trained <strong>scikit-learn Random
-                Forest</strong> model (97.3% accuracy) to predict approval in real time. The result —
-                approval probability, risk level, and personalized recommendations — is returned to
-                the app, saved to the user's history, and exportable as a PDF report.
+                LoanWise is a mobile app that predicts whether a loan is likely to be approved — in just
+                seconds. Users enter a few financial details and instantly see the likely decision, a
+                <strong>risk level</strong>, and simple tips to improve their chances, which they can save
+                or download as a PDF report. Behind the scenes it runs a trained machine-learning model
+                (<strong>97.3% accuracy</strong>) — but for the user, it's simply quick and easy.
               </p>
 
               <div class="project-stack">
@@ -446,7 +498,10 @@
                 <div class="project-stack__row"><span class="project-stack__label">ML</span><span class="project-tags"><span>scikit-learn</span><span>Random Forest</span><span>pandas</span><span>NumPy</span><span>joblib</span></span></div>
                 <div class="project-stack__row"><span class="project-stack__label">Database</span><span class="project-tags"><span>SQLite</span><span>PostgreSQL</span></span></div>
                 <div class="project-stack__row"><span class="project-stack__label">Tools</span><span class="project-tags"><span>Git &amp; GitHub</span><span>pytest</span><span>httpx</span></span></div>
+                <div class="project-stack__row"><span class="project-stack__label">Tooling</span><span class="project-tags"><span>VS Code</span><span>Hand-written Python</span></span></div>
               </div>
+
+              <p class="project-usecase"><i class="fa-solid fa-lightbulb"></i> <strong>Real-world use:</strong> Lets people instantly check how likely their loan is to be approved before applying, and gives lenders a quick, data-driven risk snapshot — saving time and reducing guesswork for both sides.</p>
 
               <div class="project-card__links">
                 <a class="btn btn--primary" href="https://github.com/thisisMUKUND11/Loan_Prediction" target="_blank" rel="noopener" data-hover><i class="fa-brands fa-github"></i> View Code</a>
@@ -454,11 +509,119 @@
               </div>
             </div>
 
-            <div class="project-shots">
-              <button class="proj-shot" data-full="assets/loanwise-1.jpg" data-cap="LoanWise — Loan Application" data-hover><img src="assets/loanwise-1.jpg" alt="LoanWise loan application screen" loading="lazy" /></button>
-              <button class="proj-shot" data-full="assets/loanwise-2.jpg" data-cap="LoanWise — App Screen" data-hover><img src="assets/loanwise-2.jpg" alt="LoanWise app screen" loading="lazy" /></button>
-              <button class="proj-shot" data-full="assets/loanwise-3.jpg" data-cap="LoanWise — App Screen" data-hover><img src="assets/loanwise-3.jpg" alt="LoanWise app screen" loading="lazy" /></button>
-              <button class="proj-shot" data-full="assets/loanwise-4.jpg" data-cap="LoanWise — Prediction Result" data-hover><img src="assets/loanwise-4.jpg" alt="LoanWise prediction result screen" loading="lazy" /></button>
+            <div class="project-gallery">
+              <span class="project-gallery__label"><i class="fa-solid fa-mobile-screen-button"></i> App Screens <em>— tap any screen to enlarge</em></span>
+              <div class="project-shots">
+                <button class="proj-shot" data-full="assets/loanwise-1.jpg" data-cap="LoanWise — Loan Application" data-hover><img src="assets/loanwise-1.jpg" alt="LoanWise loan application screen" loading="lazy" /></button>
+                <button class="proj-shot" data-full="assets/loanwise-2.jpg" data-cap="LoanWise — App Screen" data-hover><img src="assets/loanwise-2.jpg" alt="LoanWise app screen" loading="lazy" /></button>
+                <button class="proj-shot" data-full="assets/loanwise-3.jpg" data-cap="LoanWise — App Screen" data-hover><img src="assets/loanwise-3.jpg" alt="LoanWise app screen" loading="lazy" /></button>
+                <button class="proj-shot" data-full="assets/loanwise-4.jpg" data-cap="LoanWise — Prediction Result" data-hover><img src="assets/loanwise-4.jpg" alt="LoanWise prediction result screen" loading="lazy" /></button>
+              </div>
+            </div>
+          </article>
+
+          <article class="project-card glass">
+            <div class="project-card__info">
+              <div class="project-card__head">
+                <img class="project-card__icon" src="assets/famvault-icon.png" alt="FamVault logo" />
+                <div>
+                  <h3>FamVault</h3>
+                  <p class="project-card__tagline">Secure Family Document Vault</p>
+                </div>
+              </div>
+
+              <div class="project-badges">
+                <span class="project-badge project-badge--hot"><i class="fa-solid fa-shield-halved"></i> Privacy-first (on-device)</span>
+                <span class="project-badge"><i class="fa-solid fa-wand-magic-sparkles"></i> On-device AI OCR</span>
+                <span class="project-badge"><i class="fa-solid fa-bell"></i> Expiry reminders</span>
+                <span class="project-badge"><i class="fa-solid fa-wifi"></i> Works offline</span>
+              </div>
+
+              <p class="project-card__desc">
+                FamVault is a privacy-first mobile app that helps families keep their important documents —
+                IDs, bank, insurance, property — in <strong>one secure place</strong>. Snap a photo and the
+                app's <strong>on-device AI</strong> reads it and auto-fills the key details (numbers, dates,
+                amounts), then reminds you before anything expires. Everything stays on your phone — nothing
+                is uploaded to any server.
+              </p>
+
+              <div class="project-stack">
+                <div class="project-stack__row"><span class="project-stack__label">Framework</span><span class="project-tags"><span>Flutter</span><span>Dart</span></span></div>
+                <div class="project-stack__row"><span class="project-stack__label">UI</span><span class="project-tags"><span>Material 3</span><span>Responsive layouts</span></span></div>
+                <div class="project-stack__row"><span class="project-stack__label">AI / OCR</span><span class="project-tags"><span>Google ML Kit (on-device)</span><span>Custom Dart parser</span></span></div>
+                <div class="project-stack__row"><span class="project-stack__label">Storage</span><span class="project-tags"><span>Hive (offline-first)</span></span></div>
+                <div class="project-stack__row"><span class="project-stack__label">Media</span><span class="project-tags"><span>image_picker</span><span>file_picker</span></span></div>
+                <div class="project-stack__row"><span class="project-stack__label">Tooling</span><span class="project-tags"><span>VS Code</span></span></div>
+              </div>
+
+              <p class="project-usecase"><i class="fa-solid fa-lightbulb"></i> <strong>Real-world use:</strong> Keeps a family's most critical documents findable and secure in one place — so no one scrambles during a policy renewal, medical emergency, or deadline, and sensitive data never sits in unsecured cloud photo galleries.</p>
+
+              <div class="project-card__links">
+                <a class="btn btn--primary" href="https://github.com/thisisMUKUND11/famvault" target="_blank" rel="noopener" data-hover><i class="fa-brands fa-github"></i> View Code</a>
+              </div>
+            </div>
+
+            <div class="project-gallery">
+              <span class="project-gallery__label"><i class="fa-solid fa-mobile-screen-button"></i> App Screens <em>— tap any screen to enlarge</em></span>
+              <div class="project-shots">
+                <button class="proj-shot" data-full="assets/famvault-1.jpg" data-cap="FamVault — Onboarding" data-hover><img src="assets/famvault-1.jpg" alt="FamVault onboarding screen" loading="lazy" /></button>
+                <button class="proj-shot" data-full="assets/famvault-2.jpg" data-cap="FamVault — Vault (organized by category)" data-hover><img src="assets/famvault-2.jpg" alt="FamVault home vault screen" loading="lazy" /></button>
+                <button class="proj-shot" data-full="assets/famvault-3.jpg" data-cap="FamVault — AI Extraction (auto-filled fields)" data-hover><img src="assets/famvault-3.jpg" alt="FamVault AI extraction review screen" loading="lazy" /></button>
+                <button class="proj-shot" data-full="assets/famvault-4.jpg" data-cap="FamVault — Review &amp; Edit" data-hover><img src="assets/famvault-4.jpg" alt="FamVault review and edit fields screen" loading="lazy" /></button>
+              </div>
+            </div>
+          </article>
+
+          <article class="project-card glass">
+            <div class="project-card__info">
+              <div class="project-card__head">
+                <img class="project-card__icon" src="assets/harvest-icon.png" alt="Harvest-IQ logo" />
+                <div>
+                  <h3>Harvest-IQ</h3>
+                  <p class="project-card__tagline">AI-Powered Crop Recommendation App</p>
+                </div>
+              </div>
+
+              <div class="project-badges">
+                <span class="project-badge project-badge--hot"><i class="fa-solid fa-cloud-sun-rain"></i> Weather-driven AI</span>
+                <span class="project-badge"><i class="fa-solid fa-language"></i> Multilingual (EN/Tamil)</span>
+                <span class="project-badge"><i class="fa-solid fa-microphone"></i> Voice-first</span>
+                <span class="project-badge"><i class="fa-solid fa-wifi"></i> Offline mode</span>
+              </div>
+
+              <p class="project-card__desc">
+                Harvest-IQ helps farmers decide <strong>what to plant</strong>. It checks the live weather
+                for their location and uses <strong>AI</strong> to recommend the best crops to grow —
+                spoken aloud in their <strong>own language</strong>, so even farmers who can't read or type
+                comfortably can use it. It also works offline, for areas with weak signal. My first Flutter
+                app — where I began exploring mobile development and APIs.
+              </p>
+
+              <div class="project-stack">
+                <div class="project-stack__row"><span class="project-stack__label">Framework</span><span class="project-tags"><span>Flutter</span><span>Dart</span><span>Android · iOS · Web</span></span></div>
+                <div class="project-stack__row"><span class="project-stack__label">AI</span><span class="project-tags"><span>Google Gemini</span><span>google_generative_ai</span></span></div>
+                <div class="project-stack__row"><span class="project-stack__label">APIs</span><span class="project-tags"><span>OpenWeatherMap</span><span>Google Translate</span></span></div>
+                <div class="project-stack__row"><span class="project-stack__label">Device</span><span class="project-tags"><span>Geolocator</span><span>flutter_tts</span><span>speech_to_text</span><span>notifications</span></span></div>
+                <div class="project-stack__row"><span class="project-stack__label">Data</span><span class="project-tags"><span>Provider</span><span>shared_preferences (offline cache)</span></span></div>
+                <div class="project-stack__row"><span class="project-stack__label">i18n</span><span class="project-tags"><span>flutter_localizations</span><span>intl (EN/Tamil)</span></span></div>
+                <div class="project-stack__row"><span class="project-stack__label">Tooling</span><span class="project-tags"><span>VS Code</span></span></div>
+              </div>
+
+              <p class="project-usecase"><i class="fa-solid fa-lightbulb"></i> <strong>Real-world use:</strong> Turns free, live weather data into clear, spoken crop advice for small farmers — breaking through the language, literacy, and connectivity barriers that keep most agri-tech out of reach in rural areas.</p>
+
+              <div class="project-card__links">
+                <a class="btn btn--primary" href="https://github.com/thisisMUKUND11/Crop_Recommendation" target="_blank" rel="noopener" data-hover><i class="fa-brands fa-github"></i> View Code</a>
+              </div>
+            </div>
+
+            <div class="project-gallery">
+              <span class="project-gallery__label"><i class="fa-solid fa-mobile-screen-button"></i> App Screens <em>— tap any screen to enlarge</em></span>
+              <div class="project-shots">
+                <button class="proj-shot" data-full="assets/harvest-1.jpg" data-cap="Harvest-IQ — Create Profile" data-hover><img src="assets/harvest-1.jpg" alt="Harvest-IQ create profile screen" loading="lazy" /></button>
+                <button class="proj-shot" data-full="assets/harvest-2.jpg" data-cap="Harvest-IQ — App Screen" data-hover><img src="assets/harvest-2.jpg" alt="Harvest-IQ app screen" loading="lazy" /></button>
+                <button class="proj-shot" data-full="assets/harvest-3.jpg" data-cap="Harvest-IQ — App Screen" data-hover><img src="assets/harvest-3.jpg" alt="Harvest-IQ app screen" loading="lazy" /></button>
+                <button class="proj-shot" data-full="assets/harvest-4.jpg" data-cap="Harvest-IQ — Crop Recommendations" data-hover><img src="assets/harvest-4.jpg" alt="Harvest-IQ crop recommendations screen" loading="lazy" /></button>
+              </div>
             </div>
           </article>
         </div>
@@ -476,22 +639,16 @@
               <h3>B.E. Computer Science &amp; Engineering</h3>
               <p class="edu-card__inst"><i class="fa-solid fa-building-columns"></i> SNS College of Technology</p>
             </div>
-            <button class="edu-photo" data-full="assets/college.jpg" data-cap="SNS College — Campus" data-hover>
-              <img src="assets/college.jpg" alt="SNS College of Technology campus" loading="lazy"
-                   onerror="this.style.display='none';this.nextElementSibling.style.display='grid'" />
-              <span class="edu-photo__fallback"><i class="fa-solid fa-building-columns"></i></span>
-              <span class="edu-photo__cap">Campus</span>
-            </button>
             <div class="edu-card__details">
               <p class="edu-card__loc"><i class="fa-solid fa-location-dot"></i> Coimbatore, Tamil Nadu, India</p>
               <p class="edu-card__grade"><i class="fa-solid fa-award"></i> CGPA: <strong>8.66 / 10</strong></p>
             </div>
-            <button class="edu-photo" data-full="assets/college-group.jpg" data-cap="SNS College of Technology — Class Group" data-hover>
-              <img src="assets/college-group.jpg" alt="SNS College class group photo" loading="lazy"
-                   onerror="this.style.display='none';this.nextElementSibling.style.display='grid'" />
-              <span class="edu-photo__fallback"><i class="fa-solid fa-people-group"></i></span>
-              <span class="edu-photo__cap">Class Group</span>
-            </button>
+            <ul class="edu-points">
+              <li>Consistently strong academic record — <strong>8.66 / 10</strong> CGPA</li>
+              <li>Specialized in <strong>AI/ML</strong> and full-stack development</li>
+              <li>Active in hackathons, coding contests &amp; tech communities</li>
+              <li>Mentored junior students — building leadership &amp; teamwork</li>
+            </ul>
             <p class="edu-card__note"><i class="fa-solid fa-quote-left"></i> This is where my career truly began. The mentors who guided me and the friends beside me turned this journey into something I'll always cherish — they've been my biggest support in building my career.</p>
           </article>
 
@@ -501,23 +658,17 @@
               <h3>Schooling (Pre-KG to Higher Secondary)</h3>
               <p class="edu-card__inst"><i class="fa-solid fa-school"></i> Dr. P.G.V Matric Higher Secondary School</p>
             </div>
-            <button class="edu-photo" data-full="assets/school.jpg" data-cap="Dr. P.G.V Matric Hr. Sec. School — Campus" data-hover>
-              <img src="assets/school.jpg" alt="Dr. P.G.V Matric Higher Secondary School" loading="lazy"
-                   onerror="this.style.display='none';this.nextElementSibling.style.display='grid'" />
-              <span class="edu-photo__fallback"><i class="fa-solid fa-school"></i></span>
-              <span class="edu-photo__cap">Campus</span>
-            </button>
             <div class="edu-card__details">
               <p class="edu-card__loc"><i class="fa-solid fa-location-dot"></i> Coimbatore, Tamil Nadu, India</p>
               <p class="edu-card__grade"><i class="fa-solid fa-award"></i> HSC: <strong>84%</strong> &nbsp;·&nbsp; SSLC: <strong>86%</strong></p>
             </div>
-            <button class="edu-photo" data-full="assets/school-group.jpg" data-cap="Dr. P.G.V Matric Hr. Sec. School — Class Group" data-hover>
-              <img src="assets/school-group.jpg" alt="School class group photo" loading="lazy"
-                   onerror="this.style.display='none';this.nextElementSibling.style.display='grid'" />
-              <span class="edu-photo__fallback"><i class="fa-solid fa-people-group"></i></span>
-              <span class="edu-photo__cap">Class Group</span>
-            </button>
-            <p class="edu-card__note"><i class="fa-solid fa-quote-left"></i> This is where it all began — I studied here from Pre-KG to Class 12. The teachers, values, and friends I grew up with shaped my foundation and gave me the confidence to chase bigger dreams.</p>
+            <ul class="edu-points">
+              <li>Completed my entire schooling here — <strong>Pre-KG to Class 12</strong></li>
+              <li>Consistent performer — <strong>86%</strong> (Class 10), <strong>84%</strong> (Class 12)</li>
+              <li>Balanced academics with sports, art &amp; languages</li>
+              <li>Built a strong foundation of discipline and curiosity</li>
+            </ul>
+            <p class="edu-card__note"><i class="fa-solid fa-quote-left"></i> This is where it all began — I studied here from Pre-KG to Class 12. The teachers, values, and friendships I grew up with shaped my foundation, built my character, and gave me the confidence to chase bigger dreams.</p>
           </article>
         </div>
       </div>
@@ -720,11 +871,6 @@
           <a href="https://github.com/thisisMUKUND11" target="_blank" rel="noopener" class="contact-row" data-hover>
             <span class="contact-row__ic"><i class="fa-brands fa-github"></i></span>
             <span class="contact-row__txt"><b>GitHub</b><small>thisisMUKUND11</small></span>
-            <i class="fa-solid fa-arrow-up-right-from-square contact-row__go"></i>
-          </a>
-          <a href="https://www.instagram.com/mukund_.11._?igsh=a21lNnc0Z21qN2x3" target="_blank" rel="noopener" class="contact-row" data-hover>
-            <span class="contact-row__ic"><i class="fa-brands fa-instagram"></i></span>
-            <span class="contact-row__txt"><b>Instagram</b><small>@mukund_.11._</small></span>
             <i class="fa-solid fa-arrow-up-right-from-square contact-row__go"></i>
           </a>
         </div>

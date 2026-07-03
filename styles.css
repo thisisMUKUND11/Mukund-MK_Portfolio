@@ -180,16 +180,19 @@ a:focus-visible, button:focus-visible, .btn:focus-visible,
 .hero__socials a { width: 46px; height: 46px; display: grid; place-items: center; border-radius: 12px; border: 1px solid var(--border); color: var(--text-dim); font-size: 1.15rem; transition: all .3s var(--ease); }
 .hero__socials a:hover { color: var(--text-bright); border-color: var(--violet); transform: translateY(-4px); box-shadow: 0 10px 24px var(--glow-violet); background: rgba(45,212,191,0.1); }
 
-/* Hero visual — orbiting avatar */
-.hero__visual { flex-shrink: 0; }
-.orbit { position: relative; width: 470px; height: 470px; display: grid; place-items: center; }
+/* Hero visual — orbiting avatar with 3D float */
+.hero__visual { flex-shrink: 0; perspective: 1200px; }
+.orbit { position: relative; width: 470px; height: 470px; display: grid; place-items: center; animation: floatY 6s ease-in-out infinite; will-change: transform; }
+@keyframes floatY { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(-18px); } }
 .orbit__ring { position: absolute; border-radius: 50%; border: 1px solid var(--border); }
 .orbit__ring--1 { inset: 0; border-color: rgba(45,212,191,0.35); animation: spin 20s linear infinite; }
 .orbit__ring--2 { inset: 34px; border-color: rgba(56,189,248,0.28); animation: spin 30s linear infinite reverse; }
 .orbit__ring--3 { inset: 68px; border-color: rgba(244,114,182,0.25); animation: spin 40s linear infinite; }
 @keyframes spin { to { transform: rotate(360deg); } }
-.avatar { width: 340px; height: 340px; border-radius: 50%; overflow: hidden; position: relative; box-shadow: 0 0 60px var(--glow-violet); transition: transform .3s var(--ease); }
-.avatar img { width: 100%; height: 100%; object-fit: cover; object-position: center; transform: scale(1.03); }
+.avatar { width: 340px; height: 340px; border-radius: 50%; overflow: hidden; position: relative; box-shadow: 0 0 60px var(--glow-violet); transition: transform .3s var(--ease); transform-style: preserve-3d; animation: avatarGlow 5s ease-in-out infinite; }
+.avatar img { width: 100%; height: 100%; object-fit: cover; object-position: center; transform: scale(1.03); transition: transform .5s var(--ease); }
+.avatar:hover img { transform: scale(1.08); }
+@keyframes avatarGlow { 0%, 100% { box-shadow: 0 0 55px var(--glow-violet); } 50% { box-shadow: 0 0 100px var(--glow-violet), 0 0 45px var(--glow-cyan); } }
 .avatar__fallback { display: none; width: 100%; height: 100%; place-items: center; font-family: var(--display); font-size: 5rem; font-weight: 700; color: transparent; background: var(--grad); -webkit-background-clip: text; background-clip: text; background-color: var(--bg-2); }
 .orbit__chip { position: absolute; width: 52px; height: 52px; display: grid; place-items: center; border-radius: 14px; font-size: 1.5rem; color: var(--text-bright); background: var(--surface); border: 1px solid var(--border-strong); backdrop-filter: blur(8px); box-shadow: 0 8px 24px rgba(0,0,0,0.4); animation: bob 4s ease-in-out infinite; }
 .orbit__chip--ai { top: -6px; left: 20px; color: var(--violet); }

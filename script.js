@@ -189,20 +189,31 @@ if (!prefersReduced && window.matchMedia("(pointer: fine)").matches) {
   if (!box) return;
   const img = document.getElementById("lightboxImg");
   const cap = document.getElementById("lightboxCap");
-  const photos = Array.from(document.querySelectorAll(".edu-photo, .draw-thumb, .proj-shot"));
+  const THUMB_SELECTOR = ".draw-thumb, .proj-shot";
+  // Each thumbnail belongs to a gallery group; next/prev stays within its group.
+  const GROUP_SELECTOR = ".project-shots, .draw-gallery";
+  const allThumbs = Array.from(document.querySelectorAll(THUMB_SELECTOR));
+  let group = [];
   let idx = 0;
 
   function show(i) {
-    idx = (i + photos.length) % photos.length;
-    const btn = photos[idx];
+    idx = (i + group.length) % group.length;
+    const btn = group[idx];
     img.src = btn.dataset.full;
     img.alt = btn.dataset.cap || "";
     cap.innerHTML = btn.dataset.cap || "";
   }
-  function open(i) { show(i); box.classList.add("open"); box.setAttribute("aria-hidden", "false"); document.body.style.overflow = "hidden"; }
+  function open(btn) {
+    const container = btn.closest(GROUP_SELECTOR);
+    group = container ? Array.from(container.querySelectorAll(THUMB_SELECTOR)) : [btn];
+    show(group.indexOf(btn));
+    box.classList.add("open");
+    box.setAttribute("aria-hidden", "false");
+    document.body.style.overflow = "hidden";
+  }
   function close() { box.classList.remove("open"); box.setAttribute("aria-hidden", "true"); document.body.style.overflow = ""; }
 
-  photos.forEach((btn, i) => btn.addEventListener("click", () => open(i)));
+  allThumbs.forEach((btn) => btn.addEventListener("click", () => open(btn)));
   document.getElementById("lightboxClose").addEventListener("click", close);
   document.getElementById("lightboxNext").addEventListener("click", () => show(idx + 1));
   document.getElementById("lightboxPrev").addEventListener("click", () => show(idx - 1));

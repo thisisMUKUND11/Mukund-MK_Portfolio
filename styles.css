@@ -301,7 +301,7 @@ a:focus-visible, button:focus-visible, .btn:focus-visible,
 .marq { display: inline-flex; align-items: center; gap: 0.6rem; font-family: var(--mono); font-size: 0.95rem; color: var(--text-dim); white-space: nowrap; }
 .marq i { font-size: 1.5rem; }
 
-.skills-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 1.4rem; }
+.skills-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.4rem; }
 .skill-card { padding: 1.8rem; transition: transform .3s var(--ease); }
 .skill-card h3 { font-family: var(--display); font-size: 1.1rem; color: var(--text-bright); margin-bottom: 1.3rem; display: flex; align-items: center; gap: 0.6rem; }
 .skill-card h3 i { color: var(--cyan); }
@@ -317,6 +317,12 @@ a:focus-visible, button:focus-visible, .btn:focus-visible,
 .tile:hover { transform: translateY(-5px); border-color: var(--border-strong); background: linear-gradient(160deg, rgba(45,212,191,0.14), rgba(255,126,107,0.06)); box-shadow: 0 12px 28px rgba(0,0,0,0.35); }
 .tile:hover i { transform: scale(1.15); }
 .tile:hover b { color: var(--text-bright); }
+
+/* Open-source note — full-width strip under the skill cards */
+.oss-note { display: flex; align-items: center; gap: 1rem; margin-top: 1.4rem; padding: 1.2rem 1.6rem; }
+.oss-note__ic { flex-shrink: 0; width: 46px; height: 46px; display: grid; place-items: center; border-radius: 13px; font-size: 1.2rem; color: var(--cyan); background: var(--grad-soft); border: 1px solid var(--border); }
+.oss-note p { color: var(--text-dim); line-height: 1.6; }
+.oss-note b { color: var(--text-bright); font-weight: 600; }
 
 /* Soft skills — even full-width row of cards */
 .soft-heading { display: flex; align-items: center; gap: 0.6rem; font-family: var(--display); font-size: 1.15rem; font-weight: 600; color: var(--text-bright); margin: 2.2rem 0 1.2rem; }
@@ -635,6 +641,7 @@ a:focus-visible, button:focus-visible, .btn:focus-visible,
   .about__photo-col { order: -1; aspect-ratio: 16 / 10; min-height: 0; }
   .project-card { grid-template-columns: 1fr; }
   .ach-grid { grid-template-columns: repeat(3, 1fr); }
+  .skills-grid { grid-template-columns: repeat(2, 1fr); }
 }
 
 /* Large phones */
@@ -646,6 +653,8 @@ a:focus-visible, button:focus-visible, .btn:focus-visible,
   .section--contact { padding: 5rem 0; }
   .hobby-grid { grid-template-columns: 1fr; }
   .hobby-card--wide { grid-column: span 1; }
+  .skills-grid { grid-template-columns: 1fr; }
+  .skill-card { padding: 1.4rem; }
   .about__text { padding: 1.6rem; }
   .glass { border-radius: 14px; }
   .inspire-grid { grid-template-columns: 1fr; }

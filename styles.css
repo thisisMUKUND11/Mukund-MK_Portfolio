@@ -259,6 +259,14 @@ a:focus-visible, button:focus-visible, .btn:focus-visible,
 .tl-item__meta { color: var(--text-dim); font-size: 0.95rem; margin: 0.3rem 0 1rem; display: flex; flex-wrap: wrap; gap: 0.4rem 1rem; align-items: center; }
 .tl-item__meta strong { color: var(--cyan); }
 .tl-item__date { font-family: var(--mono); font-size: 0.8rem; }
+.timeline { display: flex; flex-direction: column; gap: 1.4rem; }
+/* Multiple roles at one company, LinkedIn-style */
+.tl-role { position: relative; padding: 0 0 1rem 1.2rem; border-left: 2px solid var(--border); color: var(--text-dim); }
+.tl-role:last-of-type { margin-bottom: 1rem; }
+.tl-role::before { content: ""; position: absolute; left: -6px; top: 0.4rem; width: 10px; height: 10px; border-radius: 50%; background: var(--cyan); }
+.tl-role__head { display: flex; align-items: center; gap: 0.7rem; flex-wrap: wrap; margin-bottom: 0.2rem; }
+.tl-role__head h4 { font-family: var(--display); font-size: 1.05rem; color: var(--text-bright); }
+.tl-role__type { font-size: 0.8rem; color: var(--violet); }
 .tl-item__list { display: flex; flex-direction: column; gap: 0.6rem; margin-bottom: 1.2rem; }
 .tl-item__list li { position: relative; padding-left: 1.5rem; font-size: 0.95rem; }
 .tl-item__list li::before { content: "▹"; position: absolute; left: 0; color: var(--cyan); }

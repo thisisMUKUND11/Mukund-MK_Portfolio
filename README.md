@@ -29,6 +29,7 @@ the site shows tasteful gradient placeholders automatically.
 |----------------------|---------------------------------------------|
 | `profile.jpg`        | Your photo (hero circle)                    |
 | `desmoslab-logo.png` | DESMOSLAB internship logo                   |
+| `logic_valley_ltd_logo.jpg` | Logic Valley company logo            |
 | `college.jpg`        | SNS College of Technology photo             |
 | `school.jpg`         | Dr. P.G.V Matric Hr. Sec. School photo      |
 
